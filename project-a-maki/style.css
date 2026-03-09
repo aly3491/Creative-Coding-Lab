@@ -6,8 +6,8 @@ CCLaboratories Biodiversity Atlas
 */
 
 body {
-    background-color: hsl(323, 84%, 90%);
-    color: DimGray;
+    background-color: #4f91fa;
+    color: hwb(0 0% 100%);
     font-family: 'Courier New', Courier, monospace;
     font-size: 1em;
     line-height: 1.5em;
@@ -38,15 +38,15 @@ body {
 }
 
 .red {
-    color: DeepPink;
+    color: #eeceff;
 }
 
 .green {
-    color: LightSeaGreen;
+    color: #2A5DF2;
 }
 
 .yellow {
-    color: GoldenRod;
+    color: #eeceff;
 }
 
 .two-columns {
