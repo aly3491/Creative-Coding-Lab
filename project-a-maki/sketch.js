@@ -179,7 +179,7 @@ function fish(fishX, fishY) {
 
   // nose 
   circle(0, 0, 5);
-  
+
   pop();
 }
 
@@ -279,7 +279,7 @@ function fisher() {
   endShape();
 
   yF = yF + yfSpeed;
-  if (yF > 150 || yF1 < -100) {
+  if (yF > 150 || yF < -150) {
     yfSpeed = -yfSpeed;
   }
 
