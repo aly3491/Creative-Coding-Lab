@@ -12,10 +12,7 @@ function setup() {
 
   // eraseBg(scanned, 10);
   doodles = crop(scanned, 0, 1000, 2000, 2000);
-  doodles2 = crop(scanned, 0, 500, 500, 500);
-
-  pictureAppear = false;
-
+  doodles2 = crop(scanned, 0, 500, 500, 500)
 
 }
 
