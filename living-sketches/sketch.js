@@ -13,6 +13,10 @@ function setup() {
   // eraseBg(scanned, 10);
   doodles = crop(scanned, 0, 1000, 2000, 2000);
   doodles2 = crop(scanned, 0, 500, 500, 500);
+
+  pictureAppear = false;
+
+
 }
 
 function draw() {
@@ -33,6 +37,7 @@ function draw() {
     currentFrame = floor(frameCount / 40 % 4); 
 
 
+
     if (mouseIsPressed) {
     push();
     translate(300, 100);
@@ -45,7 +50,8 @@ function draw() {
         doodles2[0].height*0.25
     );
     pop();
-    }
+    } 
+
 }
 
 // You shouldn't need to modify these helper functions:
