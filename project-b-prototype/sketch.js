@@ -38,7 +38,6 @@ function draw() {
   
   a.move();
   a.display();
-
 }
 
 class stringC {
@@ -48,7 +47,6 @@ class stringC {
     this.s = 10
     this.ySpeed = 0.5;
     this.xSpeed = 0.01;
-    this.appear = true;
   }
   move() {
     this.y = this.y + this.ySpeed;
@@ -64,12 +62,7 @@ class stringC {
 
   }
   display() {
-    if (this.appear = true) {
     circle(this.x, this.y, this.s);
-    }
-    if (mouseIsPressed) {
-      this.appear = false
-    }
   }
 }
 
