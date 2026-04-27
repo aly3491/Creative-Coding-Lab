@@ -48,13 +48,13 @@ let keySequence = [
 ];
 
 let xStrings = {
-  D: { x: 120, y: 400 },
-  A: { x: 190, y: 400 },
-  B: { x: 260, y: 100 },
-  G: { x: 190, y: 300 },
-  F: { x: 190, y: 200 },
-  E: { x: 190, y: 100 },
-  C: { x: 260, y: 200 },
+  D: { x: 214, y: 400 },
+  A: { x: 286, y: 400 },
+  B: { x: 358, y: 100 },
+  G: { x: 286, y: 300 },
+  F: { x: 286, y: 200 },
+  E: { x: 286, y: 100 },
+  C: { x: 358, y: 200 },
 
   // "A" == (190, 400),
   // "B" == (260, 100),
@@ -72,24 +72,26 @@ let xStrings = {
   // "G" == 190,
 };
 
-// function preload() {
-//   bg = loadImage("bgviola.jpeg");
-// }
-
-
 function setup() {
-  // keep these 3 lines as they are
-  let canvas = createCanvas(310, 500);
-  canvas.id("p5-canvas");
-  canvas.parent("p5-canvas-container");
-
+  createCanvas(500, 700);
   s = new string();
-
 }
 
 function draw() {
   background(250);
+  noStroke();
+  fill("#895129");
+  circle(width / 2, 600, 600);
+  rectMode(CENTER);
+  fill("#28231D");
+  rect(width / 2, height / 2, 300, 700);
+  // rect(100, 0, 300, 700);
+
   s.display();
+
+  // line(100, 0, 100, 500);
+  // line(400, 0, 400, 500);
+  
   play();
 }
 
@@ -107,9 +109,9 @@ function play() {
     textAlign(CENTER);
     textSize(20);
     text("Welcome to Viola Strings!", width / 2, height / 2);
-    text("Press 'return' to Start the Game!", width / 2, height / 2 + 50);
+    text("Press 'return/enter'", width / 2, height / 2 + 50);
+    text("to Start the Game!", width / 2, height / 2 + 70);
     // step == 1;
-    // return;
   }
 
   // game stage -> which circle to press
@@ -138,20 +140,28 @@ function keyPressed() {
 
 class string {
   constructor() {
-    this.xC = 50;
-    this.xG = 120;
-    this.xD = 190;
-    this.xA = 260;
+    this.xC = 142;
+    this.xG = 214;
+    this.xD = 286;
+    this.xA = 358;
     this.s = 50;
   }
   display() {
     // strings
+
     stroke(0);
     strokeWeight(3);
-    line(50, 0, 50, 500);
-    line(120, 0, 120, 500);
-    line(190, 0, 190, 500);
-    line(260, 0, 260, 500);
+    line(this.xC, 0, this.xC, 700);
+    line(this.xG, 0, this.xG, 700);
+    line(this.xD, 0, this.xD, 700);
+    line(this.xA, 0, this.xA, 700);
+
+    // stroke(0);
+    // strokeWeight(3);
+    // line(50, 0, 50, 500);
+    // line(120, 0, 120, 500);
+    // line(190, 0, 190, 500);
+    // line(260, 0, 260, 500);
 
     // notes
     fill(255);
