@@ -114,7 +114,7 @@ function play() {
     // step == 1;
   }
 
-  // game stage -> which circle to press
+  // game stages -> which circle to press
   if (step > 0 && step <= keySequence.length) {
     let currentNote = keySequence[step - 1];
     let p = xStrings[currentNote];
@@ -128,6 +128,7 @@ function play() {
 }
 
 function keyPressed() {
+  // what keys to press
   if (step === 0 && keyCode === ENTER) {
     step = 1;
   } else if (step > 0 && step <= keySequence.length) {
@@ -148,7 +149,6 @@ class string {
   }
   display() {
     // strings
-
     stroke(0);
     strokeWeight(3);
     line(this.xC, 0, this.xC, 700);
