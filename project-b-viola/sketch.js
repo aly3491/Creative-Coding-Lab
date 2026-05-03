@@ -13,7 +13,6 @@ function preload() {
   finentail = loadImage("ft.jpeg");
 }
 
-
 function setup() {
   let canvas = createCanvas(windowWidth, windowHeight);
   canvas.id("p5-canvas");
@@ -56,7 +55,8 @@ function draw() {
   }
   if (steps === 2) {
     background(255);
-    text("Welcome to the world of Viola.", width / 2, height / 2);
+    text("Welcome to the world of Viola.", width / 2, height / 2 - 50);
+    text("Here, you can learn and play the Viola", width/2, height/2);
     text("Press '3' to continue.", width / 2, height / 2 + 50);
 
     textSize(10);
@@ -88,7 +88,7 @@ function draw() {
 
   if (steps === 5) {
     background(255);
-    text("Press on the notes to play as song!", width / 2, 25);
+    text("Press on the notes to play as song.", width / 2, 25);
     text("Press '6' to continue.", width / 2, 55);
 
     textSize(10);
@@ -263,12 +263,17 @@ function info() {
 function play() {
   // c string
   if (mouseIsPressed) {
+    if (mouseX <= width / 2 - 140 && mouseX >= width / 2 - 160 && mouseY <= 110 && mouseY >= 90) {
+      osc.freq(130.81)
+      envelope.play(osc, 0, 0.1);
+    }
+  }
+  if (mouseIsPressed) {
     if (mouseX <= width / 2 - 120 && mouseX >= width / 2 - 180 && mouseY <= 220 && mouseY >= 180) {
       osc.freq(146.83)
       envelope.play(osc, 0, 0.1);
     }
   }
-
   if (mouseIsPressed) {
     if (mouseX <= width / 2 - 120 && mouseX >= width / 2 - 180 && mouseY <= 320 && mouseY >= 280) {
       osc.freq(164.81)
@@ -281,7 +286,6 @@ function play() {
       envelope.play(osc, 0, 0.1);
     }
   }
-
   if (mouseIsPressed) {
     if (mouseX <= width / 2 - 120 && mouseX >= width / 2 - 180 && mouseY <= 520 && mouseY >= 480) {
       osc.freq(196.00)
@@ -296,7 +300,6 @@ function play() {
       envelope.play(osc, 0, 0.1);
     }
   }
-
   if (mouseIsPressed) {
     if (mouseX <= width / 2 - 20 && mouseX >= width / 2 - 80 && mouseY <= 320 && mouseY >= 280) {
       osc.freq(246.94)
@@ -309,7 +312,6 @@ function play() {
       envelope.play(osc, 0, 0.1);
     }
   }
-
   if (mouseIsPressed) {
     if (mouseX <= width / 2 - 20 && mouseX >= width / 2 - 80 && mouseY <= 520 && mouseY >= 480) {
       osc.freq(293.66)
@@ -324,7 +326,6 @@ function play() {
       envelope.play(osc, 0, 0.1);
     }
   }
-
   if (mouseIsPressed) {
     if (mouseX <= width / 2 + 80 && mouseX >= width / 2 + 20 && mouseY <= 320 && mouseY >= 280) {
       osc.freq(349.23)
@@ -337,7 +338,6 @@ function play() {
       envelope.play(osc, 0, 0.1);
     }
   }
-
   if (mouseIsPressed) {
     if (mouseX <= width / 2 + 80 && mouseX >= width / 2 + 20 && mouseY <= 520 && mouseY >= 480) {
       osc.freq(440.00)
@@ -352,7 +352,6 @@ function play() {
       envelope.play(osc, 0, 0.1);
     }
   }
-
   if (mouseIsPressed) {
     if (mouseX <= width / 2 + 180 && mouseX >= width / 2 + 120 && mouseY <= 320 && mouseY >= 280) {
       osc.freq(523.25)
@@ -365,13 +364,93 @@ function play() {
       envelope.play(osc, 0, 0.1);
     }
   }
-
   if (mouseIsPressed) {
     if (mouseX <= width / 2 + 180 && mouseX >= width / 2 + 120 && mouseY <= 520 && mouseY >= 480) {
       osc.freq(659.25)
       envelope.play(osc, 0, 0.1);
     }
   }
+
+  // c string flats and sharps
+  if (mouseIsPressed) {
+    if (mouseX <= width / 2 - 140 && mouseX >= width / 2 - 160 && mouseY <= 150 && mouseY >= 130) {
+      osc.freq(138.59)
+      envelope.play(osc, 0, 0.1);
+    }
+  }
+  if (mouseIsPressed) {
+    if (mouseX <= width / 2 - 140 && mouseX >= width / 2 - 160 && mouseY <= 260 && mouseY >= 240) {
+      osc.freq(155.56)
+      envelope.play(osc, 0, 0.1);
+    }
+  }
+  if (mouseIsPressed) {
+    if (mouseX <= width / 2 - 140 && mouseX >= width / 2 - 160 && mouseY <= 460 && mouseY >= 440) {
+      osc.freq(185.00)
+      envelope.play(osc, 0, 0.1);
+    }
+  }
+
+  // g string flats and sharps 
+  if (mouseIsPressed) {
+    if (mouseX <= width / 2 - 40 && mouseX >= width / 2 - 60 && mouseY <= 150 && mouseY >= 130) {
+      osc.freq(207.65)
+      envelope.play(osc, 0, 0.1);
+    }
+  }
+  if (mouseIsPressed) {
+    if (mouseX <= width / 2 - 40 && mouseX >= width / 2 - 60 && mouseY <= 260 && mouseY >= 240) {
+      osc.freq(233.08)
+      envelope.play(osc, 0, 0.1);
+    }
+  }
+  if (mouseIsPressed) {
+    if (mouseX <= width / 2 - 40 && mouseX >= width / 2 - 60 && mouseY <= 460 && mouseY >= 440) {
+      osc.freq(277.18)
+      envelope.play(osc, 0, 0.1);
+    }
+  }
+
+  // d string flats and sharps
+  if (mouseIsPressed) {
+    if (mouseX <= width / 2 + 60 && mouseX >= width / 2 + 40 && mouseY <= 150 && mouseY >= 130) {
+      osc.freq(311.13)
+      envelope.play(osc, 0, 0.1);
+    }
+  }
+  if (mouseIsPressed) {
+    if (mouseX <= width / 2 + 60 && mouseX >= width / 2 + 40 && mouseY <= 360 && mouseY >= 340) {
+      osc.freq(369.99)
+      envelope.play(osc, 0, 0.1);
+    }
+  }
+  if (mouseIsPressed) {
+    if (mouseX <= width / 2 + 60 && mouseX >= width / 2 + 40 && mouseY <= 460 && mouseY >= 440) {
+      osc.freq(415.30)
+      envelope.play(osc, 0, 0.1);
+    }
+  }
+
+  // a string flats and sharps
+  if (mouseIsPressed) {
+    if (mouseX <= width / 2 + 160 && mouseX >= width / 2 + 140 && mouseY <= 150 && mouseY >= 130) {
+      osc.freq(466.16)
+      envelope.play(osc, 0, 0.1);
+    }
+  }
+  if (mouseIsPressed) {
+    if (mouseX <= width / 2 + 160 && mouseX >= width / 2 + 140 && mouseY <= 360 && mouseY >= 340) {
+      osc.freq(554.37)
+      envelope.play(osc, 0, 0.1);
+    }
+  }
+  if (mouseIsPressed) {
+    if (mouseX <= width / 2 + 160 && mouseX >= width / 2 + 140 && mouseY <= 460 && mouseY >= 440) {
+      osc.freq(622.25)
+      envelope.play(osc, 0, 0.1);
+    }
+  }
+
 }
 
 class game {
@@ -514,5 +593,25 @@ class string {
     text("C", this.xA, 300);
     text("D", this.xA, 400);
     text("E", this.xA, 500);
+
+    textSize(15);
+
+    text("C", this.xC, 100)
+
+    text("C#", this.xC, 140);
+    text("D#/E♭", this.xC, 250);
+    text("F#", this.xC, 450);
+
+    text("G#/A♭", this.xG, 140);
+    text("A#/E♭", this.xG, 250);
+    text("C#", this.xG, 450);
+
+    text("D#/E♭", this.xD, 140);
+    text("F#", this.xD, 350);
+    text("G#/A♭", this.xD, 450)
+
+    text("A#/B♭", this.xA, 140);
+    text("C#", this.xA, 350)
+    text("D#/E♭", this.xA, 450)
   }
 }
