@@ -1,5 +1,6 @@
 html,
 body {
+  background-color: white;
   margin: 0;
   padding: 0;
 }
@@ -21,3 +22,32 @@ canvas {
   left: 0px;
   top: 0px;
 }
+
+#title {
+  position: fixed;
+  width: 100%;
+}
+
+#title-wrapper {
+  text-align: center;
+}
+
+#title-wrapper {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  padding: 20px;
+}
+  
+#p5-canvas-container {
+  position: relative;
+  z-index: 1;
+  margin-top: -20px; /* adjust this to move canvas up/down */
+}
+  
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
