@@ -35,6 +35,9 @@ function draw() {
   strokeWeight(0);
   fill(0);
   textAlign(CENTER);
+
+  textSize(10);
+  text("A simple work by Annie 杨", width / 2, 770);
   textSize(20);
 
   if (steps === 0) {
@@ -46,19 +49,30 @@ function draw() {
     background(255);
     text("Do you still remember the Viola?", width / 2, height / 2);
     text("Press '2' to continue.", width / 2, height / 2 + 50);
+
+    textSize(10);
+    text("A simple work by Annie 杨", width / 2, 770);
+    textSize(20);
   }
   if (steps === 2) {
     background(255);
     text("Welcome to the world of Viola.", width / 2, height / 2);
     text("Press '3' to continue.", width / 2, height / 2 + 50);
+
+    textSize(10);
+    text("A simple work by Annie 杨", width / 2, 770);
+    textSize(20);
   }
 
   if (steps === 3) {
     background(255);
-    text("On the next page, hoover your mouse over", width / 2, height / 2 - 50);
-    text("the parts of the Viola and click on it to", width / 2, height / 2);
-    text("learn more about them.", width / 2, height / 2 + 50)
-    text("Press '4' to continue.", width / 2, height / 2 + 100);
+    text("On the next page, hoover your mouse over the parts", width / 2, height / 2 - 50);
+    text("of the Viola and click on it to learn more about them.", width / 2, height / 2);
+    text("Press '4' to continue.", width / 2, height / 2 + 50);
+
+    textSize(10);
+    text("A simple work by Annie 杨", width / 2, 770);
+    textSize(20);
   }
 
   if (steps === 4) {
@@ -66,19 +80,32 @@ function draw() {
     image(bg, width / 2, height / 2, 700, 700);
     info();
     text("Press '5' to continue.", width / 2, 15);
+
+    textSize(10);
+    text("A simple work by Annie 杨", width / 2, 770);
+    textSize(20);
   }
 
   if (steps === 5) {
     background(255);
     text("Press on the notes to play as song!", width / 2, 25);
     text("Press '6' to continue.", width / 2, 55);
+
+    textSize(10);
+    text("A simple work by Annie 杨", width / 2, 770);
+    textSize(20);
+
     s.display();
     play();
-
   }
 
   if (steps === 6) {
     background(255);
+
+    textSize(10);
+    text("A simple work by Annie 杨", width / 2, 770);
+    textSize(20);
+
     g.display();
     g.mousePsed();
   }
@@ -392,7 +419,11 @@ class game {
 
       text("Thank you for remembering the Viola.", width / 2, height / 2 - 50)
       text("Press '7' to return to the start.", width / 2, height / 2)
-      text("See you soon.", width / 2, height / 2 + 50)
+      text("Hope to see you again soon <3.", width / 2, height / 2 + 50)
+
+      textSize(10);
+      text("A simple work by Annie 杨", width / 2, 770);
+      textSize(20);
     }
   }
   mousePsed() {
