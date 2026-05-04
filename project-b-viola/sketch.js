@@ -55,7 +55,7 @@ function draw() {
   }
   if (steps === 2) {
     background(255);
-    text("Welcome to the world of Viola.", width / 2, height / 2 - 50);
+    text("Welcome to the World of Viola.", width / 2, height / 2 - 50);
     text("Here, you can learn and play the Viola.", width / 2, height / 2);
     text("Press '3' to continue.", width / 2, height / 2 + 50);
 
@@ -108,7 +108,6 @@ function draw() {
 
     textSize(10);
     text("A simple work by Annie 杨", width / 2, 770);
-
 
   }
 
@@ -522,6 +521,7 @@ class game {
       textAlign(CENTER);
       textSize(20);
 
+      // step 8  
       text("Thank you for remembering the Viola.", width / 2, height / 2 - 50)
       text("Press '8' to return to the start.", width / 2, height / 2)
       text("Hope to see you again soon <3.", width / 2, height / 2 + 50)
