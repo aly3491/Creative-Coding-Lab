@@ -164,20 +164,20 @@ function keyPressed() {
 function info() {
   // scroll 
   if (mouseX <= width / 2 + 50 && mouseX >= width / 2 && mouseY <= 90 && mouseY >= 80) {
-    text("scroll", width / 2 - 60, 100);
+    text("Scroll", width / 2 - 60, 100);
   }
 
   if (mouseIsPressed) {
     if (mouseX <= width / 2 + 50 && mouseX >= width / 2 && mouseY <= 90 && mouseY >= 80) {
       image(scrollnpeg, width / 2, height / 2, 700, 700);
-      text("The scroll is just a decorative part of the viola.", 300, height / 2);
+      text("The scroll is just a decorative part of the Viola.", 300, height / 2);
       text("It exists on the Violin, Cello, and Bass too.", 300, height / 2 + 50);
     }
   }
 
   // pegs
   if (mouseX <= 750 && mouseX >= 700 && mouseY <= 150 && mouseY >= 100) {
-    text("pegs", 650, 150);
+    text("Pegs", 650, 150);
   }
 
   if (mouseIsPressed) {
@@ -190,7 +190,7 @@ function info() {
 
   // finger board
   if (mouseX <= 750 && mouseX >= 700 && mouseY <= 350 && mouseY >= 300) {
-    text("fingerboard", 650, 300);
+    text("Fingerboard", 650, 300);
   }
 
   if (mouseIsPressed) {
@@ -205,7 +205,7 @@ function info() {
 
   // strings
   if (mouseX <= width / 2 + 30 && mouseX >= width / 2 - 30 && mouseY <= 510 && mouseY >= 480) {
-    text("strings- C, G, A, D", width / 2 - 170, 520);
+    text("Strings- C, G, A, D", width / 2 - 170, 520);
   }
 
   if (mouseIsPressed) {
@@ -225,7 +225,7 @@ function info() {
 
   // bridge
   if (mouseX <= width / 2 + 30 && mouseX >= width / 2 - 30 && mouseY <= 560 && mouseY >= 540) {
-    text("bridge", width / 2 - 110, 550)
+    text("Bridge", width / 2 - 110, 550)
   }
 
   if (mouseIsPressed) {
@@ -239,21 +239,21 @@ function info() {
 
   // f holes 
   if (mouseX <= 810 && mouseX >= 790 && mouseY <= 610 && mouseY >= 580) {
-    text("f holes", 900, 610)
+    text("F Holes", 900, 610)
   }
 
   if (mouseIsPressed) {
     if (mouseX <= 810 && mouseX >= 790 && mouseY <= 610 && mouseY >= 580) {
       image(fholenbridge, width / 2, height / 2, 700, 700);
       text("Allows for air to travel outside of", 250, height / 2 - 50);
-      text(" the Viola, amplifying the sound.", 250, height / 2);
+      text("the Viola, amplifying the sound.", 250, height / 2);
       text("It exists on the Violin, Cello, and Bass too.", 250, height / 2 + 50);
     }
   }
 
   // fine tuners 
   if (mouseX <= 770 && mouseX >= 750 && mouseY <= 630 && mouseY >= 590) {
-    text("fine tuners", 910, 640)
+    text("Fine Tuners", 910, 640)
   }
 
   if (mouseIsPressed) {
@@ -266,7 +266,7 @@ function info() {
 
   // tail piece
   if (mouseX <= width / 2 + 50 && mouseX >= width / 2 && mouseY <= 700 && mouseY >= 640) {
-    text("tail piece", 910, 647)
+    text("Tailpiece", 910, 647)
   }
 
   if (mouseIsPressed) {
