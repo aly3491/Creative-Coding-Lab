@@ -114,12 +114,14 @@ function draw() {
   if (steps === 7) {
     background(255);
 
-    textSize(10);
-    text("A simple work by Annie 杨", width / 2, 770);
-    textSize(20);
-
     g.display();
     g.mousePsed();
+
+    textSize(10);
+    strokeWeight(0);
+    fill(0);
+    text("A simple work by Annie 杨", width / 2, 770);
+    textSize(20);
   }
 
 }
