@@ -152,6 +152,7 @@ function keyPressed() {
 
   if (steps === 6 && key === '7') {
     steps = 7;
+    g = new game();
   }
 
   if (steps === 7 && key === '8') {
@@ -509,6 +510,11 @@ class game {
       // ellipse(this.offset + (this.pos[i] * this.space) + (this.space) / 2, this.y[i], this.space, this.duration[i] * this.space);
       rect(this.offset + (this.pos[i] * this.space), this.y[i], this.space, this.duration[i] * this.space);
       this.y[i] = this.y[i] + 2;
+
+      if (i === this.click && this.y[i] > height) {
+        steps = 6;
+
+      }
     }
     if (this.click >= this.noteNumber) {
       strokeWeight(0);
@@ -532,8 +538,6 @@ class game {
         this.osc.freq(this.noteSound[this.note[this.click]]);
         this.envelope.play(this.osc, 0, 0.1);
         this.click++;
-      } else {
-        text("you lost", withd / 2, height / 2);
       }
     }
   }
