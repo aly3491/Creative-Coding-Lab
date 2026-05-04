@@ -56,7 +56,7 @@ function draw() {
   if (steps === 2) {
     background(255);
     text("Welcome to the world of Viola.", width / 2, height / 2 - 50);
-    text("Here, you can learn and play the Viola", width/2, height/2);
+    text("Here, you can learn and play the Viola.", width / 2, height / 2);
     text("Press '3' to continue.", width / 2, height / 2 + 50);
 
     textSize(10);
@@ -102,6 +102,19 @@ function draw() {
   if (steps === 6) {
     background(255);
 
+    text("On the next page, click on the notes as it falls", width / 2, height / 2 - 50);
+    text("down (hint: it's like piano tiles).", width / 2, height / 2);
+    text("Press '7' to continue.", width / 2, height / 2 + 50);
+
+    textSize(10);
+    text("A simple work by Annie 杨", width / 2, 770);
+
+
+  }
+
+  if (steps === 7) {
+    background(255);
+
     textSize(10);
     text("A simple work by Annie 杨", width / 2, 770);
     textSize(20);
@@ -109,6 +122,7 @@ function draw() {
     g.display();
     g.mousePsed();
   }
+
 }
 
 function keyPressed() {
@@ -137,9 +151,14 @@ function keyPressed() {
   }
 
   if (steps === 6 && key === '7') {
+    steps = 7;
+  }
+
+  if (steps === 7 && key === '8') {
     steps = 0;
     g = new game();
   }
+
 }
 
 function info() {
@@ -213,7 +232,7 @@ function info() {
     if (mouseX <= width / 2 + 30 && mouseX >= width / 2 - 30 && mouseY <= 560 && mouseY >= 540) {
       image(fholenbridge, width / 2, height / 2, 700, 700);
       text("Holds on to the strings and transfers", 250, height / 2 - 50);
-      text("vibrations to the body for amplification", 250, height / 2);
+      text("vibrations to the body for amplification.", 250, height / 2);
       text("It exists on the Violin, Cello, and Bass too.", 250, height / 2 + 50);
     }
   }
@@ -464,7 +483,7 @@ class game {
     this.envelope = new p5.Env();
     this.envelope.setADSR(0.001, 0.5, 0.1, 0.5);
 
-    this.pos = [0, 3, 2, 1, 3, 0, 1, 2, 2, 0, 2, 1, 2, 3, 1, 0, 1, 3, 2, 3, 1, 3, 2, 0, 1, 2, 0, 3, 2, 0, 1, 1, 3, 2, 3, 1, 0, 1, 3, 2, 0, 1,];
+    this.pos = [0, 3, 2, 1, 3, 0, 1, 2, 1, 0, 2, 1, 2, 3, 1, 0, 1, 3, 2, 3, 1, 3, 2, 0, 1, 2, 0, 3, 2, 0, 1, 2, 3, 2, 3, 1, 0, 1, 3, 2, 0, 1,];
     this.note = [0, 0, 1, 1, 2, 2, 1, 3, 3, 4, 4, 5, 5, 0, 1, 1, 3, 3, 4, 4, 5, 1, 1, 3, 3, 4, 4, 5, 0, 0, 1, 1, 2, 2, 1, 3, 3, 4, 4, 5, 5, 0,];
     this.noteSound = [293.66, 440.0, 493.88, 392.00, 369.99, 329.63];
     this.duration = [1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 2,];
@@ -473,7 +492,7 @@ class game {
     this.noteNumber = 42 // total number of notes
     this.space = 50 // how far apart each note is from each other when falling
     this.click = 0;
-    this.offset = (width / 2) - (4 * this.space) / 2;
+    this.offset = (width / 2) - (4 * this.space) / 2; // to get the game to start in the center 
 
     this.y[0] = 0;
     for (let i = 1; i < this.noteNumber; i++) {
@@ -487,6 +506,7 @@ class game {
         fill("gray");
       } else
         fill(255);
+      // ellipse(this.offset + (this.pos[i] * this.space) + (this.space) / 2, this.y[i], this.space, this.duration[i] * this.space);
       rect(this.offset + (this.pos[i] * this.space), this.y[i], this.space, this.duration[i] * this.space);
       this.y[i] = this.y[i] + 2;
     }
@@ -497,7 +517,7 @@ class game {
       textSize(20);
 
       text("Thank you for remembering the Viola.", width / 2, height / 2 - 50)
-      text("Press '7' to return to the start.", width / 2, height / 2)
+      text("Press '8' to return to the start.", width / 2, height / 2)
       text("Hope to see you again soon <3.", width / 2, height / 2 + 50)
 
       textSize(10);
@@ -512,6 +532,8 @@ class game {
         this.osc.freq(this.noteSound[this.note[this.click]]);
         this.envelope.play(this.osc, 0, 0.1);
         this.click++;
+      } else {
+        text("you lost", withd / 2, height / 2);
       }
     }
   }
