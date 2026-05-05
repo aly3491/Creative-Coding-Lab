@@ -135,8 +135,8 @@ function keyPressed() {
 
   if (steps === 0 && key === '1') {
     steps = 1;
-    // osc.start();
-    // envelope.play(osc, 0, 0.1);
+    osc.start();
+    envelope.play(osc, 0, 0.1);
   }
 
   if (steps === 1 && key === '2') {
@@ -293,8 +293,7 @@ function play() {
   // c string
   if (mouseIsPressed) {
     if (mouseX <= width / 2 - 140 && mouseX >= width / 2 - 160 && mouseY <= 110 && mouseY >= 90) {
-      // console.log("play C")
-      osc.start();
+      console.log("play C")
       osc.freq(130.81)
       envelope.play(osc, 0, 0.1);
     }
