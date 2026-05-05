@@ -4,6 +4,7 @@ let s;
 let g;
 
 let osc;
+let envelope;
 
 function preload() {
   bg = loadImage("bgviola.jpeg");
@@ -45,6 +46,7 @@ function draw() {
   }
 
   if (steps === 1) {
+    osc.amp(0);
     background(255);
     text("Do you still remember the Viola?", width / 2, height / 2);
     text("Press '2' to continue.", width / 2, height / 2 + 50);
@@ -101,6 +103,8 @@ function draw() {
 
   if (steps === 6) {
     background(255);
+    osc.amp(0);
+    osc.stop();
 
     text("On the next page, click on the notes as it falls", width / 2, height / 2 - 50);
     text("down (hint: it's like piano tiles).", width / 2, height / 2);
@@ -648,6 +652,8 @@ class string {
 
 
 function mousePressed() {
-  osc.start();
-  osc.amp(1.0);
+  if (steps < 7) {
+    osc.start();
+    envelope.play(osc, 0, 0.1);
+  }
 }
