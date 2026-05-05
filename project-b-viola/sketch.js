@@ -285,6 +285,7 @@ function play() {
   // c string
   if (mouseIsPressed) {
     if (mouseX <= width / 2 - 140 && mouseX >= width / 2 - 160 && mouseY <= 110 && mouseY >= 90) {
+      console.log("play C")
       osc.freq(130.81)
       envelope.play(osc, 0, 0.1);
     }
