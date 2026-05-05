@@ -652,7 +652,7 @@ class string {
 
 
 function mousePressed() {
-  if (steps < 7) {
+  if (steps > 4) {
     osc.start();
     envelope.play(osc, 0, 0.1);
   }
