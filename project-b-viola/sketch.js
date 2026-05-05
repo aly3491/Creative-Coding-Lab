@@ -131,8 +131,11 @@ function draw() {
 }
 
 function keyPressed() {
+
   if (steps === 0 && key === '1') {
     steps = 1;
+    osc.start();
+    envelope.play(osc, 0, 0.1);
   }
 
   if (steps === 1 && key === '2') {
@@ -651,9 +654,9 @@ class string {
 
 
 
-function mousePressed() {
-  if (steps < 2) {
-    osc.start();
-    envelope.play(osc, 0, 0.1);
-  }
-}
+// function mousePressed() {
+//   if (steps < 2) {
+//     osc.start(); ``
+//     envelope.play(osc, 0, 0.1);
+//   }
+// }
