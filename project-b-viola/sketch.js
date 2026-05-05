@@ -644,3 +644,10 @@ class string {
     text("D#/E♭", this.xA, 450)
   }
 }
+
+
+
+function mousePressed() {
+  osc.start();
+  osc.amp(1.0);
+}
