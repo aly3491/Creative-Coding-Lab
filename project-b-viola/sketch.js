@@ -90,7 +90,7 @@ function draw() {
 
   if (steps === 5) {
     background(255);
-    text("Press on the notes to play a song.", width / 2, 15);
+    text("Press on the notes to play.", width / 2, 15);
     text("Move on as you wish.", width / 2, 35)
     text("Press '6' to continue.", width / 2, 55);
 
