@@ -136,9 +136,7 @@ function keyPressed() {
   if (steps === 0 && key === '1') {
     steps = 1;
     osc.start();
-    osc.amp(0);
-    envelope.play(osc, 0, 0.1);
-    osc.amp(1);
+    // envelope.play(osc, 0, 0.1);
   }
 
   if (steps === 1 && key === '2') {
