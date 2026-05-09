@@ -566,21 +566,12 @@ class string {
   display() {
     // strings
 
-    let xStart = width / 2 - (4 * this.space) / 2;
-
     stroke(0);
     strokeWeight(3);
     line(this.xC, 100, this.xC, 700);
     line(this.xG, 100, this.xG, 700);
     line(this.xD, 100, this.xD, 700);
     line(this.xA, 100, this.xA, 700);
-
-    // stroke(0);
-    // strokeWeight(3);
-    // line(50, 0, 50, 500);
-    // line(120, 0, 120, 500);
-    // line(190, 0, 190, 500);
-    // line(260, 0, 260, 500);
 
     // notes
     fill(255);
@@ -653,9 +644,9 @@ class string {
   }
 }
 
-// function mousePressed() {
-//   if (steps < 2) {
-//     osc.start(); 
-//     envelope.play(osc, 0, 0.1);
-//   }
-// }
+
+
+
+
+
+
