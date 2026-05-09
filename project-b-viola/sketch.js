@@ -68,7 +68,7 @@ function draw() {
 
   if (steps === 3) {
     background(255);
-    text("On the next page, hoover your mouse over the parts", width / 2, height / 2 - 50);
+    text("On the next page, hover your mouse over the parts", width / 2, height / 2 - 50);
     text("of the Viola and click on it to learn more about them.", width / 2, height / 2);
     text("Press '4' to continue.", width / 2, height / 2 + 50);
 
